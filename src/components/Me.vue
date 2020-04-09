@@ -38,16 +38,17 @@
         </div>
         <van-divider/>
         <div>
-          <div class="card">
-              <van-row >
-                  <van-col span="8">时间</van-col>
-              </van-row>
-              <van-row gutter="8">
-                  <van-col span="8">span: 8</van-col>
-                  <van-col span="8">span: 8</van-col>
-                  <van-col span="8">span: 8</van-col>
-              </van-row>
-          </div>
+            <van-collapse v-model="activeName" accordion>
+                <van-collapse-item v-for="(item,itemIndex) in listData" :title="item.title" :name="itemIndex" :key="itemIndex">
+                    <div class="card" v-for="(cardItem,cardItemIndex) in item.cardData" :key="cardItemIndex">
+                        <van-row gutter="8">
+                            <van-col span="8">{{cardItem.time}}</van-col>
+                            <van-col span="8">{{cardItem.type}}</van-col>
+                            <van-col span="8">{{cardItem.award}}</van-col>
+                        </van-row>
+                    </div>
+                </van-collapse-item>
+            </van-collapse>
         </div>
     </div>
 </template>
@@ -66,6 +67,34 @@
                 notice: {
                     msg: "仅作个人开发测试使用..."
                 },
+                listData:[
+                    {
+                        title: '证书',
+                        cardData:[
+                            {
+                                time: '2018-11',
+                                type: '国家软考',
+                                award: '系统架构设计师'
+
+                            },
+                            {
+                                time: '2017-11',
+                                type: '国家软考',
+                                award: '软件设计师'
+
+                            }
+                        ]
+                    },
+                    {
+                        title: '个人技能',
+                        cardData:[
+                            {
+
+                            }
+                        ]
+                    }
+                ],
+                activeName: '1',
 
                 images: [
                     'http://images.zhifa.tech/%E8%BD%AF%E4%BB%B6%E7%B3%BB.jpg',
@@ -94,6 +123,7 @@
     }
     .card{
         padding: 12px;
+        margin: 8px -8px;
         background-color: #fff;
         border-radius: 13px;
         box-shadow: 6px 7px 12px 2px #ebedf0;
@@ -107,5 +137,4 @@
         padding-left: 14px;
         top: 9px;
     }
-
 </style>
