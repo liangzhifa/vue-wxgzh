@@ -39,12 +39,16 @@
         <van-divider/>
         <div>
             <van-collapse v-model="activeName" accordion>
-                <van-collapse-item v-for="(item,itemIndex) in listData" :title="item.title" :name="itemIndex" :key="itemIndex">
+                <van-collapse-item v-for="(item,itemIndex) in listData" :title="item.title" :name="itemIndex"
+                                   :key="itemIndex" :icon="item.icon">
                     <div class="card" v-for="(cardItem,cardItemIndex) in item.cardData" :key="cardItemIndex">
-                        <van-row gutter="8">
-                            <van-col span="8">{{cardItem.time}}</van-col>
-                            <van-col span="8">{{cardItem.type}}</van-col>
-                            <van-col span="8">{{cardItem.award}}</van-col>
+                        <van-row gutter="8" v-if="cardItem.skill">
+                            <van-col span="11">{{cardItem.skill}}</van-col>
+                        </van-row>
+                        <van-row gutter="1" v-else>
+                            <van-col span="6">{{cardItem.time}}</van-col>
+                            <van-col span="11">{{cardItem.type}}</van-col>
+                            <van-col span="7">{{cardItem.award}}</van-col>
                         </van-row>
                     </div>
                 </van-collapse-item>
@@ -60,17 +64,18 @@
         data() {
             return {
                 lzf: {
-                    school: "广东东海洋大学",
+                    school: "广东海洋大学",
                     profession: "软件工程",
                     my_head_img: "http://images.zhifa.tech/%E6%A2%81%E6%99%BA%E5%8F%91.jpg"
                 },
                 notice: {
                     msg: "仅作个人开发测试使用..."
                 },
-                listData:[
+                listData: [
                     {
-                        title: '证书',
-                        cardData:[
+                        title: '证书奖项',
+                        icon: 'award',
+                        cardData: [
                             {
                                 time: '2018-11',
                                 type: '国家软考',
@@ -78,24 +83,61 @@
 
                             },
                             {
+                                time: '2018-05',
+                                type: '第九届蓝桥杯算法大赛',
+                                award: '国赛三等奖'
+
+                            },
+                            {
+                                time: '2018-04',
+                                type: '第九届蓝桥杯算法大赛',
+                                award: '省赛一等奖'
+
+                            },
+                            {
+                                time: '2017-2018',
+                                type: '校奖学金',
+                                award: '三等奖'
+
+                            },
+                            {
                                 time: '2017-11',
                                 type: '国家软考',
                                 award: '软件设计师'
+
+                            },
+                            {
+                                time: '2017-05',
+                                type: '第八届蓝桥杯算法大赛',
+                                award: '国赛三等奖'
+
+                            },
+                            {
+                                time: '2017-04',
+                                type: '第八届蓝桥杯算法大赛',
+                                award: '省赛一等奖'
+
+                            },
+                            {
+                                time: '2016-12',
+                                type: '大学英语',
+                                award: 'CET4'
 
                             }
                         ]
                     },
                     {
                         title: '个人技能',
-                        cardData:[
-                            {
-
-                            }
+                        icon: 'column',
+                        cardData: [
+                            {skill:'666'},
+                            {skill:'666'},
+                            {skill:'666'},
+                            {skill:'666'}
                         ]
                     }
                 ],
                 activeName: '1',
-
                 images: [
                     'http://images.zhifa.tech/%E8%BD%AF%E4%BB%B6%E7%B3%BB.jpg',
                     'http://images.zhifa.tech/BV1A5048.jpg',
@@ -107,9 +149,10 @@
 </script>
 
 <style scoped lang="less">
-    .me{
+    .me {
         margin-bottom: 40px;
     }
+
     .my-swipe {
         height: 220px;
         img {
@@ -119,22 +162,31 @@
     }
 
     .my-head-img {
-
+        margin-left: 2px;
     }
-    .card{
+
+    .card {
         padding: 12px;
         margin: 8px -8px;
         background-color: #fff;
         border-radius: 13px;
         box-shadow: 6px 7px 12px 2px #ebedf0;
     }
-    .block{
+
+    .block {
         height: 100%;
         width: 100%;
     }
+
     .el-timeline-item_wrapper {
         position: relative;
         padding-left: 14px;
         top: 9px;
+    }
+    .van-divider {
+        margin: 5px 0;
+    }
+    .van-collapse-item__content {
+        padding: 3px 16px;
     }
 </style>

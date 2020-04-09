@@ -6,7 +6,7 @@
         我
       </van-tabbar-item>
       <van-tabbar-item replace to="/experience" icon="apps-o">
-        经验
+        项目
       </van-tabbar-item>
     </van-tabbar>
   </div>
