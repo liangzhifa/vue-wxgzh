@@ -1,10 +1,10 @@
 <template>
     <div class="experience">
-        <van-panel :title="item.title" :desc="item.desc" class="my-panel"
+        <van-panel :title="item.title" :desc="item.desc" :class="['my-panel',index%2==0?'card-green':'card-blue']"
                    v-for="(item,index) in listData" :key="index"
                    @click="changeShow(item)" >
-            <van-row gutter="0" class="my-van-row">
-                <van-col span="5" v-for="(tagItem,tagItemIndex) in item.tag " :key="tagItemIndex" >
+            <van-row gutter="8" class="my-van-row">
+                <van-col v-for="(tagItem,tagItemIndex) in item.tag " :key="tagItemIndex" >
                     <van-tag round  :color="colorList[tagItemIndex]">{{tagItem}}</van-tag>
                 </van-col>
             </van-row>
@@ -14,12 +14,12 @@
             <div class="content" >
                 <van-row gutter="10" class="my-time-company">
                     <van-col span="9">
-                        2018.06-2019.02
+                       {{dataItem.project_time}}
                     </van-col>
                     <van-col span="2">
 
                     </van-col>
-                    <van-col span="12">奥格智能科技有限公司</van-col>
+                    <van-col span="12">{{dataItem.company}}</van-col>
                 </van-row>
 
                 <van-collapse v-model="activeName" accordion>
@@ -28,23 +28,31 @@
                             <div><van-tag mark type="primary">项目描述</van-tag></div>
                         </template>
                         <div class="my-text-space">
-                            {{textarea}}
+                            {{dataItem.project_desc}}
                         </div>
                     </van-collapse-item>
-                    <van-collapse-item title="标题2" name="2">
+                    <van-collapse-item  name="2">
                         <template #title>
-                            <div><van-tag mark type="success">责任</van-tag></div>
+                            <div><van-tag mark color="#7232dd">功能模块</van-tag></div>
                         </template>
                         <div class="my-text-space">
-                            {{textarea}}
+                            {{dataItem.project_module}}
                         </div>
                     </van-collapse-item>
-                    <van-collapse-item title="标题3" name="3">
+                    <van-collapse-item name="3">
+                        <template #title>
+                            <div><van-tag mark type="success">项目职责</van-tag></div>
+                        </template>
+                        <div class="my-text-space">
+                            {{dataItem.project_responsibilities}}
+                        </div>
+                    </van-collapse-item>
+                    <van-collapse-item name="4" v-if="dataItem.project_skill_desc">
                         <template #title>
                             <div><van-tag mark type="warning">技术要点</van-tag></div>
                         </template>
                         <div class="my-text-space">
-                            {{textarea}}
+                            {{dataItem.project_skill_desc}}
                         </div>
                     </van-collapse-item>
                 </van-collapse>
@@ -67,9 +75,15 @@
                 colorList: ['#8bd3f2','#b884dd','#986add','#687fdd','#655ADD','#29f585','#f175f5'],
                 listData: [
                     {
-                        title:'项目1',
+                        title:'四川精准服务系统',
+                        company:'德生科技股份有限公司',
+                        project_time:'2019.02-2019.3',
+                        project_desc: '精准服务系统是公司从产品提供商向产品+运营服务商转变的标志性产品，通过德生精准服务系统的呼叫、短信等功能，支持人社公众服务业务，提高公众满意度。',
+                        project_module: '主线功能有智能客服+人工坐席服务、待遇发放短信通知。实现精准社保卡信息客服服务。',
+                        project_responsibilities: '负责阿里云短信接口的开发，单条、批量发送、处理短信上行回执；在接口的基础上实现待遇发放短信的提醒功能。',
+                        project_skill_desc: '通过线程池异步方式批量发送短信下行通知，提升系统的相应和吞吐量。',
                         desc:'查看详情',
-                        tag:["springboot","mysql","jenkins",'docker'],
+                        tag:["springboot","jpa","oracle",'redis','线程池'],
                         details:'详情啊1'
                     },
                     {
@@ -175,5 +189,11 @@
     .my-text-space {
         text-indent: 2em;
     }
+    .card-green{
+        border: 0.8px solid #0aee627d;
+    }
 
+    .card-blue{
+        border: 0.8px solid #409eff8f
+    }
 </style>
