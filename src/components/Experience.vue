@@ -37,6 +37,48 @@
                         desc:'查看详情',
                         tag:["springboot","jenkins"],
                         details:'详情啊2'
+                    },
+                    {
+                        title:'项目2',
+                        desc:'查看详情',
+                        tag:["springboot","jenkins"],
+                        details:'详情啊2'
+                    },
+                    {
+                        title:'项目2',
+                        desc:'查看详情',
+                        tag:["springboot","jenkins"],
+                        details:'详情啊2'
+                    },
+                    {
+                        title:'项目2',
+                        desc:'查看详情',
+                        tag:["springboot","jenkins"],
+                        details:'详情啊2'
+                    },
+                    {
+                        title:'项目2',
+                        desc:'查看详情',
+                        tag:["springboot","jenkins"],
+                        details:'详情啊2'
+                    },
+                    {
+                        title:'项目2',
+                        desc:'查看详情',
+                        tag:["springboot","jenkins"],
+                        details:'详情啊2'
+                    },
+                    {
+                        title:'项目2',
+                        desc:'查看详情',
+                        tag:["springboot","jenkins"],
+                        details:'详情啊2'
+                    },
+                    {
+                        title:'项目2',
+                        desc:'查看详情',
+                        tag:["springboot","jenkins"],
+                        details:'详情啊2'
                     }
                 ],
                 dataItem: {}
@@ -56,7 +98,7 @@
     .experience {
         width: 100%;
         height: 100%;
-        margin-bottom: 40px;
+        margin-bottom: 58px;
     }
 
     .content {
