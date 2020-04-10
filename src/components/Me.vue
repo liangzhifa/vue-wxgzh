@@ -42,9 +42,13 @@
                 <van-collapse-item v-for="(item,itemIndex) in listData" :title="item.title" :name="itemIndex"
                                    :key="itemIndex" :icon="item.icon">
                     <div class="card" v-for="(cardItem,cardItemIndex) in item.cardData" :key="cardItemIndex">
-                        <van-row gutter="8" v-if="cardItem.skill">
-                            <van-col span="11">{{cardItem.skill}}</van-col>
-                        </van-row>
+                        <!--<van-row gutter="8" v-if="cardItem.skill">
+
+                            <van-col span="24">{{cardItem.skill}}</van-col>
+                        </van-row>-->
+                        <div v-if="cardItem.skill" class="my-skill">
+                            {{cardItem.skill}}
+                        </div >
                         <van-row gutter="1" v-else>
                             <van-col span="6">{{cardItem.time}}</van-col>
                             <van-col span="11">{{cardItem.type}}</van-col>
@@ -130,7 +134,8 @@
                         title: '个人技能',
                         icon: 'column',
                         cardData: [
-                            {skill:'666'},
+                            {skill:'111111111111111111111111111' +
+                                    '1111111111111111111111111111111111111111111111'},
                             {skill:'666'},
                             {skill:'666'},
                             {skill:'666'}
@@ -188,5 +193,10 @@
     }
     .van-collapse-item__content {
         padding: 3px 16px;
+    }
+    .my-skill {
+        word-wrap: break-word;
+        word-break: normal;
+        //text-indent: 2em;
     }
 </style>
