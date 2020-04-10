@@ -24,7 +24,7 @@
         data() {
             return {
                 show: false,
-                colorList: ['#8bd3f2','#b884dd','#986add','#687fdd','#655ADD'],
+                colorList: ['#8bd3f2','#b884dd','#986add','#687fdd','#655ADD','#29f585','#f175f5'],
                 listData: [
                     {
                         title:'项目1',
@@ -87,7 +87,9 @@
         methods: {
             changeShow(item) {
                 this.show = !this.show;
-                this.dataItem = item;
+                if (this.show) {
+                    this.dataItem = item;
+                }
             }
         }
     }
