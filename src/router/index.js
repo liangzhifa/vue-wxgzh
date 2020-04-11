@@ -4,6 +4,9 @@ import VueRouter from 'vue-router'
 import Vant from 'vant';
 import 'vant/lib/index.css';
 import { Lazyload } from 'vant';
+import { ImagePreview } from 'vant';
+
+
 /*==========*/
 
 import UserInfo from "../components/UserInfo";
@@ -18,6 +21,7 @@ Vue.use(ElementUI);
 
 
 Vue.use(Lazyload);
+Vue.use(ImagePreview);
 Vue.use(VueRouter);
 Vue.use(Vant);
 const routes = [
