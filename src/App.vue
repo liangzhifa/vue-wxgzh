@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
     <van-tabbar route>
       <van-tabbar-item replace to="/me" icon="home-o">
         我
