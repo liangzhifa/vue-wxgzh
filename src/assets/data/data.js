@@ -34,7 +34,7 @@ const exprienceListData = [
         project_img: true,
         desc: '查看详情',
         tag: ["springboot", "jenkins",'Echart'],
-        details: '详情啊'
+        details: '详情'
     },
     {
         title: '德生城市中台项目-人力资源产品',
@@ -46,37 +46,7 @@ const exprienceListData = [
         project_skill_desc: '基于springcloud的微服务架构，注册中心使用阿里的nacos（集成注册中心、分布式配置中心）；服务网关使用spring的gateway（使用基于netty异步io）。',
         desc: '查看详情    小程序已上线，搜索《云社聘》',
         tag: ["springcloud","分布式架构", "jenkins","高可用mysql"],
-        details: '详情啊2'
-    },
-    {
-        title: '项目2',
-        desc: '查看详情',
-        tag: ["springboot", "jenkins"],
-        details: '详情啊2'
-    },
-    {
-        title: '项目2',
-        desc: '查看详情',
-        tag: ["springboot", "jenkins"],
-        details: '详情啊2'
-    },
-    {
-        title: '项目2',
-        desc: '查看详情',
-        tag: ["springboot", "jenkins"],
-        details: '详情啊2'
-    },
-    {
-        title: '项目2',
-        desc: '查看详情',
-        tag: ["springboot", "jenkins"],
-        details: '详情啊2'
-    },
-    {
-        title: '项目2',
-        desc: '查看详情',
-        tag: ["springboot", "jenkins"],
-        details: '详情啊2'
+        details: '详情'
     }
 ];
 export default exprienceListData;

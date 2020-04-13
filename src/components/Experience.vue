@@ -134,7 +134,7 @@
     }
     .my-action-sheet{
         //width: content-box;
-        height: 90%;
+        height: 80%;
         width: 100%;
     }
     .my-time-company{
