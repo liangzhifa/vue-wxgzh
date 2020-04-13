@@ -2,6 +2,7 @@ module.exports = {
     publicPath: './',
     productionSourceMap: false,
     devServer: {
+        disableHostCheck: true,
         proxy: {
             '/api': {
                 target: "https://www.layui.com/demo/",//这个是你要访问得接口地址

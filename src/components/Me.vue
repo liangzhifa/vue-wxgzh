@@ -2,7 +2,7 @@
     <div class="me">
         <div class="me-swipe">
             <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
-                <van-swipe-item v-for="(image, index) in images" :key="index">
+                <van-swipe-item v-for="(image, index) in images" :key="index" @click="openSwipe(index)">
                     <img v-lazy="image"/>
                 </van-swipe-item>
             </van-swipe>
@@ -63,7 +63,7 @@
 </template>
 
 <script>
-
+    import {ImagePreview} from "vant";
     export default {
         name: "Me",
         mounted() {
@@ -71,9 +71,17 @@
         },
         methods: {
             async getUserList() {
-                const {data: res} = await this.$http.get('table/user/?page=1&limit=10');
-                console.log(res);
+                /*const {data: res} = await this.$http.get('table/user/?page=1&limit=10');
+                console.log(res);*/
+            },
+            openSwipe(index){
+                ImagePreview({
+                    images: this.images,
+                    closeable: true,
+                    startPosition: index
+                });
             }
+
         },
         data() {
             return {
