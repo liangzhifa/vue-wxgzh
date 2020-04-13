@@ -19,7 +19,6 @@ import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 /*==========*/
 
-
 Vue.use(Lazyload);
 Vue.use(ImagePreview);
 Vue.use(VueRouter);
