@@ -177,7 +177,7 @@
 
 <style scoped lang="less">
     .me {
-        margin-bottom: 40px;
+        margin-bottom: 55px;
     }
 
     .my-swipe {
