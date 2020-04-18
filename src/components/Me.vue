@@ -88,7 +88,7 @@
                 lzf: {
                     school: "广东海洋大学",
                     profession: "软件工程",
-                    my_head_img: "http://images.zhifa.tech/%E6%A2%81%E6%99%BA%E5%8F%91.jpg"
+                    my_head_img: "http://images.zhifa.tech/me.jpg"
                 },
                 notice: {
                     msg: "仅作个人开发测试使用..."
@@ -166,9 +166,10 @@
                 ],
                 activeName: '1',
                 images: [
-                    'http://images.zhifa.tech/%E8%BD%AF%E4%BB%B6%E7%B3%BB.jpg',
-                    'http://images.zhifa.tech/BV1A5048.jpg',
-                    'http://images.zhifa.tech/7B106189F47CC99111322C624FF_27821928_CB67C.jpg'
+                    'http://images.zhifa.tech/%E6%95%99%E5%AD%A6%E6%A5%BC.jpg',
+                    'http://images.zhifa.tech/%E9%97%A8%E5%8F%A3%E7%99%BD%E8%A1%A3.jpg',
+                    'http://images.zhifa.tech/%E9%92%9F%E6%B5%B7%E6%A5%BC.jpg',
+                    'http://images.zhifa.tech/%E7%8F%AD%E7%BA%A7%E6%A0%A1%E9%97%A8%E5%8F%A3.jpg'
                 ]
             }
         }
