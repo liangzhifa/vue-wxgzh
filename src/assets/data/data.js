@@ -45,7 +45,7 @@ const exprienceListData = [
         project_responsibilities: '编写搜索微服务公共组件。我采用的是elasticsearch搜索引擎作为基础搜索服务组件，ik中文分词器作为插件。目前完成关于政府类的政策搜索、根据标题或者内容作为筛选条件，政策类型（个人、企业）作为过滤条件；C端用户搜索职位，搜索职位或者公司查询对应的职位信息，然后根据多条件（地点范围、职位类型、薪资范围等）过滤查询结果；帮你推荐功能，根据用户填写的个性化字段，把这些作为筛选条件到es上面匹配信息。由于是公共层服务为了解耦其他服务，本搜索服务都对外提供全量同步、增量同步、删除接口。只要其他服务以restful风格的请求调用即可。',
         project_skill_desc: '基于springcloud的微服务架构，注册中心使用阿里的nacos（集成注册中心、分布式配置中心）；服务网关使用spring的gateway（使用基于netty异步io）。',
         desc: '查看详情    小程序已上线，搜索《云社聘》',
-        tag: ["springcloud","分布式架构", "jenkins持续集成","高可用mysql",'seata分布式事务'],
+        tag: ["springcloud","分布式架构", "jenkins持续集成","高可用mysql",'seata分布式事务','elasticsearch'],
         details: '详情'
     }
 ];
