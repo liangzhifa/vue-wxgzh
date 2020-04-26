@@ -159,6 +159,7 @@
                             {skill: '熟悉常用的关系型数据库产品（MySQL、Oracle），熟练的使用SQL进行数据库编程，能手动搭建mysql读写分离、主从架构、了解数据索引机制，锁机制，SQL优化。'},
                             {skill: '熟练使用远程过程调用框架webservice、熟悉springboot等开源框架技术，熟练使用redis缓存（分布式session和分布式锁）。'},
                             {skill: '了解分布式结构体系、SOA架构、Dubbo+Zookeeper、Spring Cloud技术栈以及Eureka、nacos注册中心、Feign客户端负载均衡组件、Hystrix熔断器、Config分布式统一配置中心、Zuul、spring的gateway服务网关。'},
+                            {skill: '能手写自定义springboot-starter组件，熟悉springboot加载组件过程，可以根据需要手动封装基础组件。'},
                             {skill: '熟悉elasticsearch搜索引擎，以及常用字段搜索和地图GEO的范围搜索，目前应用改技术编写搜索业务到实际项目中。'},
                             {skill: '运用设计原则和设计模式对项目进行架构设计、封装服务调用中间层，提高代码重用性，加强代码解耦能力。'}
                         ]
