@@ -22,7 +22,7 @@
                     <van-col span="12">{{dataItem.company}}</van-col>
                 </van-row>
                 <van-row v-if="dataItem.project_img">
-                    <img :src="city_img" class="city-img" @click="amplificationImg">
+                    <img :src="dataItem.img_url" class="city-img" @click="amplificationImg(dataItem.img_url)">
                 </van-row>
 
                 <van-collapse v-model="activeName" accordion>
@@ -94,9 +94,9 @@
                     this.activeName =  '1';
                 }
             },
-            amplificationImg() {
+            amplificationImg(url) {
                 ImagePreview({
-                    images: [this.city_img],
+                    images: [url],
                     closeable: true
                 });
             }

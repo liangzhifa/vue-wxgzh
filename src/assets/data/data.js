@@ -20,7 +20,7 @@ const exprienceListData = [
         project_responsibilities: '负责整个 pc 端后台开发（设备认证、卡信息验证、制卡、数据回盘）以及后台管理：用户信息管理、区域管理、机构管理、设备管理、预制卡管理，后台整体 框架 SSM+webservice，接口的调用采用DES对称加密算法，对请求参数的加解密。一体化项目采用多个项目模块，前后端分离， 请求统一经过 Nginx转发到后端，每次请求的头部通过JWT的token的形式验证接口的合法性；系统采用 AOP 动态切换多个数据源。对于中间临时数据我用Redis进行缓存。',
         project_skill_desc: '该项目采用分布式负载均衡的部署方式。提升系统的性能和可用性。',
         desc: '查看详情',
-        tag: ["SSM", "webservice", 'DES加解密', 'Nginx负载均衡','jwt-token'],
+        tag: ["SSM", "webservice", 'DES加解密', 'Nginx负载均衡', 'jwt-token'],
         details: '详情'
     },
     {
@@ -32,8 +32,9 @@ const exprienceListData = [
         project_responsibilities: '通过财务给来的Excel数据，后台编写文件上传接口，然后统计地图的业务数据。',
         project_skill_desc: '该项目用到文件上传和统计类型的SQL编写。',
         project_img: true,
+        img_url: 'http://images.zhifa.tech/%E5%9F%8E%E5%B8%82%E5%88%86%E5%B8%83%E5%9B%BE.png',
         desc: '查看详情',
-        tag: ["springboot", "jenkins",'docker','Echart'],
+        tag: ["springboot", "jenkins", 'docker', 'Echart'],
         details: '详情'
     },
     {
@@ -45,7 +46,21 @@ const exprienceListData = [
         project_responsibilities: '编写搜索微服务公共组件。我采用的是elasticsearch搜索引擎作为基础搜索服务组件，ik中文分词器作为插件。目前完成关于政府类的政策搜索、根据标题或者内容作为筛选条件，政策类型（个人、企业）作为过滤条件；C端用户搜索职位，搜索职位或者公司查询对应的职位信息，然后根据多条件（地点范围、职位类型、薪资范围等）过滤查询结果；帮你推荐功能，根据用户填写的个性化字段，把这些作为筛选条件到es上面匹配信息。由于是公共层服务为了解耦其他服务，本搜索服务都对外提供全量同步、增量同步、删除接口。只要其他服务以restful风格的请求调用即可。',
         project_skill_desc: '基于springcloud的微服务架构，注册中心使用阿里的nacos（集成注册中心、分布式配置中心）；服务网关使用spring的gateway（使用基于netty异步io）。',
         desc: '查看详情    小程序已上线，搜索《云社聘》',
-        tag: ["springcloud","分布式架构", "jenkins持续集成","高可用mysql",'seata分布式事务','elasticsearch'],
+        tag: ["springcloud", "分布式架构", "jenkins持续集成", "高可用mysql", 'seata分布式事务', 'elasticsearch'],
+        details: '详情'
+    },
+    {
+        title: '广州市排水设施巡检系统',
+        company: '奥格智能科技有限公司',
+        project_time: '2020.03-2020.04',
+        project_desc: '该系统面向的用户为广州市各区的排水公司，大模块包括：巡检巡查（巡检日志、巡检轨迹、养护计划审核）、数据上报（排水口管理、内涝管理、水质管理、管网运行图、城镇污水处理）、专栏管理、排水户管理（门派查询、导出、问题处理）',
+        project_module: '排水监测站和水务局提出污水处理厂污泥处理上报和统计，要求维管单位在对污水处理厂对污泥处理情况上报，系统提供报表导出功能进行数据导出，此需求涉及PC端功能和报表开发，报表均提供时间戳功能，可以统计时间段的数据。',
+        project_responsibilities: '编写、处理城镇污水处理模块的数据，导入各区的污水、污泥信息，并统计报表信息;对广州市各区的排水公司污水、污泥数据的增删改查。广州市污泥干化情况统计、广州市干化污泥焚烧处置情况统计。',
+        project_skill_desc: '',
+        project_img: true,
+        img_url: 'http://images.zhifa.tech/%E5%B9%BF%E5%B7%9E%E6%8E%92%E6%B0%B4%E5%B7%A1%E6%A3%80pc%281%29.png',
+        desc: '查看详情',
+        tag: ["ssh", "jdbcTemplate", "oracle 11g", "系统数据维护", "数据统计报表"],
         details: '详情'
     }
 ];
