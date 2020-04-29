@@ -154,13 +154,15 @@
                         cardData: [
                             {skill: '熟练使用Java语言进行面向对象程序设计以及常用的Java API，包括集合框架、反射等。'},
                             {skill: '熟悉常用的数据结构, 算法知识。能手写一些深度优先搜索算法(八皇后、马踏棋盘、走迷宫)。'},
-                            {skill: '理解多线程并发下web开发注意事项以及线程安全问题。'},
+                            {skill: '理解多线程并发下web开发注意事项以及线程安全问题，使用多线程异步技术解决项目中请求快速响应问题。'},
                             {skill: '对Spring的IoC容器和AOP原理有了解，熟练的运用Spring框架管理各种Web组件及其依赖关系，熟练的使用Spring进行事务、日志、安全性等的管理，有使用Spring MVC作为表示层技术以及使用Spring提供的持久化支持进行Web项目开发的经验，熟悉Spring对其他框架的整合。'},
                             {skill: '熟悉常用的关系型数据库产品（MySQL、Oracle），熟练的使用SQL进行数据库编程，能手动搭建mysql读写分离、主从架构、了解数据索引机制，锁机制，SQL优化。'},
+                            {skill: '能搭建分布式缓存 Redis 集群（通过集群管理工具搭建官方在 3.0 版本推出的一套分布式存储方案）。'},
                             {skill: '熟练使用远程过程调用框架webservice、熟悉springboot等开源框架技术，熟练使用redis缓存（分布式session和分布式锁）。'},
-                            {skill: '了解分布式结构体系、SOA架构、Dubbo+Zookeeper、Spring Cloud技术栈以及Eureka、nacos注册中心、Feign客户端负载均衡组件、Hystrix熔断器、Config分布式统一配置中心、Zuul、spring的gateway服务网关。'},
+                            {skill: '了解分布式结构体系、SOA架构、Dubbo+Zookeeper、Spring Cloud/Alibaba技术栈以及Eureka、nacos注册中心、Feign客户端负载均衡组件、Hystrix熔断器、Config分布式统一配置中心、Zuul、spring的gateway服务网关。'},
                             {skill: '能手写自定义springboot-starter组件，熟悉springboot加载组件过程，可以根据需要手动封装基础组件。'},
-                            {skill: '熟悉elasticsearch搜索引擎，以及常用字段搜索和地图GEO的范围搜索，目前应用改技术编写搜索业务到实际项目中。'},
+                            {skill: '熟悉elasticsearch搜索引擎，以及常用字段搜索和地图GEO的范围搜索、关键词模糊匹配、分词查询，目前应用改技术编写搜索业务到实际项目中。'},
+                            {skill: '能搭建Jenkins+Docker用于项目的CI/CD做持续集成、部署，通过Docker镜像的方式实现自动化流程来检查代码并部署到新环境。'},
                             {skill: '运用设计原则和设计模式对项目进行架构设计、封装服务调用中间层，提高代码重用性，加强代码解耦能力。'}
                         ]
                     }
