@@ -50,6 +50,33 @@ const exprienceListData = [
         details: '详情'
     },
     {
+        title: '读写分离，高性能、高可用mysql集群',
+        company: '德生科技股份有限公司',
+        project_time: '2019.08-2020.02',
+        project_responsibilities: '搭建读写分离+主备热切+mycat数据库中间件的高可用mysql。考虑到中台未来的用户量大，并发要求高。我搭建了双主双从架构模式的mysql数据库，双主互为主从。底层通过监听binlog日志文件的形式实现数据的同步，为了解决同步时延带来的查询问题，在服务层添加事务（mysql事务的默认特性：可重复读），让请求打到主库上面。利用mycat数据库中间件屏蔽数据库集群的信息，所有请求统一由中间件转发处理。',
+        desc: '查看详情 ',
+        tag: ["高性能", "高可用", "主备热切mysql", "数据库中间件"],
+        details: '详情'
+    },
+    {
+        title: 'seata实现分布式事务强一致性',
+        company: '德生科技股份有限公司',
+        project_time: '2019.08-2020.02',
+        project_responsibilities: '由于系统采用springcloud分布式架构微服务，各个服务相互独立，数据库也相应独立分离。基于业务需求，需要在两个数据库之间实现数据操作的强一致性（原子性），所以我基于Alibaba提供的组件搭建了seata分布式事务强一致性组件，多个微服务的数据源注册到统一的seata服务（事务协调者），由调用方（事务发起者统一发起全局事务）事务在多个微服务（参与者）中传播，最后采取二段提交协议的方式达到事务强一致性。',
+        desc: '查看详情',
+        tag: ["springcloud分布式架构", "多数据源", "事务强一致性"],
+        details: '详情'
+    },
+    {
+        title: 'ELK日志收集',
+        company: '德生科技股份有限公司',
+        project_time: '2019.08-2020.02',
+        project_responsibilities: '搭建日志收集、分析框架ELK，在每个微服务的日志配置文件中配置好logstash信息，通过它收集每个微服务的日志信息，我设置按照日期分包，服务名分文件的形式，一份写到elasticsearch上面，一份保存在服务器本地做日志归档；然后用kibana监控每个微服务输出到es上面的信息。通过kibana组件实时监控各个微服务的运行状态。',
+        desc: '查看详情',
+        tag: ["elasticsearch", "logstash", "kibana"],
+        details: '详情'
+    },
+    {
         title: '广州市排水设施巡检系统',
         company: '奥格智能科技有限公司',
         project_time: '2020.03-2020.04',

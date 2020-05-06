@@ -25,8 +25,8 @@
                     <img :src="dataItem.img_url" class="city-img" @click="amplificationImg(dataItem.img_url)">
                 </van-row>
 
-                <van-collapse v-model="activeName" accordion>
-                    <van-collapse-item  name="1">
+                <van-collapse v-model="activeName" accordion >
+                    <van-collapse-item  name="1" v-if="dataItem.project_desc">
                         <template #title>
                             <div><van-tag mark type="primary">项目描述</van-tag></div>
                         </template>
@@ -34,7 +34,7 @@
                             {{dataItem.project_desc}}
                         </div>
                     </van-collapse-item>
-                    <van-collapse-item  name="2">
+                    <van-collapse-item  name="2" v-if="dataItem.project_module">
                         <template #title>
                             <div><van-tag mark color="#7232dd">功能模块</van-tag></div>
                         </template>
