@@ -50,6 +50,18 @@
                         <div v-if="cardItem.skill" class="my-skill">
                             {{cardItem.skill}}
                         </div>
+                        <div v-if="cardItem.enterprise" class=""><!-- 居中 -->
+                            <van-row type="flex" justify="center">
+                                <van-col span="12"> {{cardItem.time}}</van-col>
+                                <van-col span="12">{{cardItem.enterprise}}</van-col>
+                            </van-row>
+
+                            <div class="my-skill" v-if="cardItem.contents"
+                                 v-for="(workItem,workIndex) in cardItem.contents" :key="workIndex">
+                                {{workItem.work}}
+                            </div>
+
+                        </div>
                         <van-row gutter="1" v-else>
                             <van-col span="6">{{cardItem.time}}</van-col>
                             <van-col span="11">{{cardItem.type}}</van-col>
@@ -64,6 +76,7 @@
 
 <script>
     import {ImagePreview} from "vant";
+
     export default {
         name: "Me",
         mounted() {
@@ -74,7 +87,7 @@
                 /*const {data: res} = await this.$http.get('table/user/?page=1&limit=10');
                 console.log(res);*/
             },
-            openSwipe(index){
+            openSwipe(index) {
                 ImagePreview({
                     images: this.images,
                     closeable: true,
@@ -164,6 +177,32 @@
                             {skill: '熟悉elasticsearch搜索引擎，以及常用字段搜索和地图GEO的范围搜索、关键词模糊匹配、分词查询，目前应用改技术编写搜索业务到实际项目中。'},
                             {skill: '能搭建Jenkins+Docker用于项目的CI/CD做持续集成、部署，通过Docker镜像的方式实现自动化流程来检查代码并部署到新环境。'},
                             {skill: '运用设计原则和设计模式对项目进行架构设计、封装服务调用中间层，提高代码重用性，加强代码解耦能力。'}
+                        ]
+                    },
+                    {
+                        title: '工作经历',
+                        icon: 'more',
+                        cardData: [
+                            {
+                                time: '2018.12-2020.2',
+                                enterprise: '德生科技股份有限公司',
+                                department: '大数据项目组',
+                                position: 'java开发工程师',
+                                contents: [
+                                    {work: '1.运用设计原则和设计模式对项目进行架构设计基于springcloud的微服务架构，注册中心使用阿里的nacos（集成注册中心、分布式配置中心）；'},
+                                    {work: '2.运用设计原则和设计模式对项目进行架构设计'}
+                                ]
+                            },
+                            {
+                                time: '2020.3-至今',
+                                enterprise: '奥格智能科技有限公司',
+                                department: '智慧水务二部',
+                                position: 'java开发工程师',
+                                contents: [
+                                    {work: '1.运用设计原则和设计模式对项目进行架构设计基于springcloud的微服务架构，注册中心使用阿里的nacos（集成注册中心、分布式配置中心）；'},
+                                    {work: '2.运用设计原则和设计模式对项目进行架构设计'}
+                                ]
+                            }
                         ]
                     }
                 ],
