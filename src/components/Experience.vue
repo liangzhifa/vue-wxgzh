@@ -91,7 +91,12 @@
                 this.show = !this.show;
                 if (this.show) {
                     this.dataItem = item;
-                    this.activeName =  '1';
+                    if (item.project_desc) {
+                        this.activeName =  '1';
+                    } else {
+                        this.activeName =  '3';
+                    }
+
                 }
             },
             amplificationImg(url) {

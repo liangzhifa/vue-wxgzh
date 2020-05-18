@@ -52,8 +52,13 @@
                         </div>
                         <div v-if="cardItem.enterprise" class=""><!-- 居中 -->
                             <van-row type="flex" justify="center">
-                                <van-col span="12"> {{cardItem.time}}</van-col>
-                                <van-col span="12">{{cardItem.enterprise}}</van-col>
+                                <!--<van-col span="12"> {{cardItem.time}}</van-col>-->
+                                <van-col span="24">
+                                    <van-divider :style="{ color: '#1989fa', borderColor: '#1989fa', padding: '0 16px' }">
+                                        {{cardItem.enterprise}}
+                                    </van-divider>
+
+                                </van-col>
                             </van-row>
 
                             <div class="my-skill" v-if="cardItem.contents"
@@ -184,7 +189,7 @@
                         icon: 'more',
                         cardData: [
                             {
-                                time: '2018.12-2020.2',
+                                /*time: '2018.12-2020.2',*/
                                 enterprise: '德生科技股份有限公司',
                                 department: '大数据项目组',
                                 position: 'java开发工程师',
@@ -198,7 +203,7 @@
                                 ]
                             },
                             {
-                                time: '2020.3-至今',
+                                /* time: '2020.3-至今',*/
                                 enterprise: '奥格智能科技有限公司',
                                 department: '智慧水务二部',
                                 position: 'java开发工程师',
@@ -206,7 +211,7 @@
                                     {work: '1.负责广州市排水设施巡检系统数据维护和更新迭代功能，合并其他城市或地区的排水巡检记录数据。'},
                                     {work: '2.编写、处理广州市各区的排水公司的排水设施巡检信息系统的数据，并统计报表信息。'},
                                     {work: '3.优化系统性能，提升用户交互体验，重构，优化项目代码结构。'},
-                                    {work: '与产品经理，设计师，安卓APP开发工作人员协同工作，负责pc端，安卓手机APP端项目接口开发。'}
+                                    {work: '4.与产品经理，设计师，安卓APP开发工作人员协同工作，负责pc端，安卓手机APP端项目接口开发。'}
                                 ]
                             }
                         ]
@@ -214,10 +219,13 @@
                 ],
                 activeName: '1',
                 images: [
-                    'http://images.zhifa.tech/%E6%95%99%E5%AD%A6%E6%A5%BC.jpg',
+                    'http://images.zhifa.tech/%E5%9F%8E%E5%B8%82%E5%88%86%E5%B8%83%E5%9B%BE.png',
+                    'http://images.zhifa.tech/%E4%BA%91%E7%A4%BE%E8%81%98.jpg',
+                    'http://images.zhifa.tech/%E5%B9%BF%E5%B7%9E%E6%8E%92%E6%B0%B4%E5%B7%A1%E6%A3%80pc%281%29.png'
+                   /* 'http://images.zhifa.tech/%E6%95%99%E5%AD%A6%E6%A5%BC.jpg',
                     'http://images.zhifa.tech/%E9%97%A8%E5%8F%A3%E7%99%BD%E8%A1%A3.jpg',
                     'http://images.zhifa.tech/%E9%92%9F%E6%B5%B7%E6%A5%BC.jpg',
-                    'http://images.zhifa.tech/%E7%8F%AD%E7%BA%A7%E6%A0%A1%E9%97%A8%E5%8F%A3.jpg'
+                    'http://images.zhifa.tech/%E7%8F%AD%E7%BA%A7%E6%A0%A1%E9%97%A8%E5%8F%A3.jpg'*/
                 ]
             }
         }
