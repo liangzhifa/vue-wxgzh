@@ -219,11 +219,12 @@
                 ],
                 activeName: '1',
                 images: [
-                    'http://images.zhifa.tech/%E5%9F%8E%E5%B8%82%E5%88%86%E5%B8%83%E5%9B%BE.png',
                     'http://images.zhifa.tech/%E4%BA%91%E7%A4%BE%E8%81%983%E5%90%881.jpg',
+                    'http://images.zhifa.tech/%E5%9F%8E%E5%B8%82%E5%88%86%E5%B8%83%E5%9B%BE.png',
                     'http://images.zhifa.tech/%E5%B9%BF%E5%B7%9E%E6%8E%92%E6%B0%B4%E5%B7%A1%E6%A3%80pc%281%29.png',
                     'http://images.zhifa.tech/%E6%B1%A1%E6%B3%A5%E5%B9%B2%E5%8C%96%E6%83%85%E5%86%B5.png',
-                    'http://images.zhifa.tech/%E5%B9%B2%E5%8C%96%E6%B1%A1%E6%B3%A5%E7%84%9A%E7%83%A7%E5%A4%84%E7%BD%AE%E7%BB%9F%E8%AE%A1.png'
+                    'http://images.zhifa.tech/%E5%B9%B2%E5%8C%96%E6%B1%A1%E6%B3%A5%E7%84%9A%E7%83%A7%E5%A4%84%E7%BD%AE%E7%BB%9F%E8%AE%A1.png',
+                    'http://images.zhifa.tech/%E5%B7%A1%E6%A3%80app5%E5%90%881.jpg'
                    /* 'http://images.zhifa.tech/%E6%95%99%E5%AD%A6%E6%A5%BC.jpg',
                     'http://images.zhifa.tech/%E9%97%A8%E5%8F%A3%E7%99%BD%E8%A1%A3.jpg',
                     'http://images.zhifa.tech/%E9%92%9F%E6%B5%B7%E6%A5%BC.jpg',
