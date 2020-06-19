@@ -6,7 +6,7 @@ import store from './store'
 import axios from 'axios'
 Vue.prototype.$http = axios
 
-axios.defaults.baseURL='/api/'
+axios.defaults.baseURL='http://47.100.45.101/'
 
 Vue.config.productionTip = false;
 
