@@ -26,7 +26,7 @@ const routes = [
   {
     path: '/',
     name: 'main',
-    redirect: "/img",
+    redirect: "/me",
     component: Main,
     children:[
       {
